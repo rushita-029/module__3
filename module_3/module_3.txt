@@ -1,0 +1,153 @@
+
+
+ 1 .What are the new tags added in HTML5 ?
+
+Semantic Elements:
+
+<article>: Represents a self-contained composition, such as a blog post or news article.
+<aside>: Contains content that is related to the surrounding content, like sidebars or pull quotes.
+<details>: Creates a disclosure widget from which the user can obtain additional information or controls.
+<figcaption>: Provides a caption for a <figure> element.
+<figure>: Represents self-contained content, often with an associated caption.
+<footer>: Defines the footer for a section or page, typically containing information about the author, copyright, etc.
+<header>: Represents introductory content or a group of navigational links.
+<main>: Denotes the main content of a document, excluding headers, footers, and sidebars.
+<mark>: Highlights text to indicate relevance or importance.
+<nav>: Defines a set of navigation links.
+<section>: Represents a thematic grouping of content, typically with a heading.
+<summary>: Provides a summary for the <details> element.
+
+Form Elements:
+
+<datalist>: Contains a set of predefined options for an <input> element.
+<output>: Represents the result of a calculation or user action.
+<progress>: Displays the progress of a task.
+<meter>: Represents a scalar value within a known range, like a gauge.
+
+Multimedia Elements:
+
+<audio>: Embeds sound content.
+<video>: Embeds video content.
+<track>: Provides text tracks for <video> and <audio> elements (for subtitles, captions, etc.).
+Scripting and APIs:
+<canvas>: Provides a space for rendering graphics on the fly via scripting (e.g., JavaScript).
+<svg>: Supports scalable vector graphics.
+These tags enhance the semantic structure of web pages and improve accessibility and usability for users and search engines alike.
+
+ 2 . how to embed audio and video in a webpage ?
+
+Embedding Audio :
+To embed audio, use the <audio> tag. You can include controls for playback, specify multiple audio sources, and set options for autoplay and looping.
+
+example;
+
+<audio controls>
+  <source src="audio-file.mp3" type="audio/mpeg">
+  <source src="audio-file.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+
+Attributes:
+controls: Displays play, pause, and volume controls.
+autoplay: Starts playing the audio automatically (not recommended for user experience).
+loop: Repeats the audio when it ends.
+muted: Starts the audio muted.
+
+Embedding Video:
+To embed video, use the <video> tag in a similar manner:
+
+example;
+
+<video controls width="640" height="360">
+  <source src="video-file.mp4" type="video/mp4">
+  <source src="video-file.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+Attributes:
+controls: Displays play, pause, and volume controls.
+autoplay: Starts playing the video automatically.
+loop: Repeats the video when it ends.
+muted: Starts the video muted.
+poster: Specifies an image to be shown while the video is downloading or until the user hits play.
+
+ 3 . Semantic element in HTML5 ?
+
+Semantic elements in HTML5 are tags that clearly describe their meaning in a human- and machine-readable way. They provide context to the content they enclose, making it easier for search engines and browsers to interpret the structure and purpose of the webpage. Here are some key semantic elements:
+
+<header>: Represents introductory content or navigational links.
+<nav>: Defines a set of navigation links.
+<main>: Specifies the main content of the document.
+<article>: Represents a self-contained piece of content that could be distributed independently.
+<section>: Defines a thematic grouping of content, typically with a heading.
+<aside>: Contains content that is tangentially related to the main content (like sidebars).
+<footer>: Represents the footer for a section or page, typically containing metadata, copyright, or links.
+<figure>: Used to encapsulate media content, like images or diagrams, along with a caption.
+<figcaption>: Provides a caption for the <figure> element.
+<time>: Represents a specific time or range of time.
+Using these elements helps improve accessibility, SEO, and maintainability of web content.
+
+ 4 . Canvas and SVG tags 
+
+Both <canvas> and <svg> are powerful HTML elements used for rendering graphics, but they serve different purposes and have different characteristics. Here's a breakdown of each:
+
+<canvas>:
+
+Definition: A <canvas> element is a bitmap-based drawing surface that can be manipulated using JavaScript.
+Use Cases: Ideal for dynamic, scriptable graphics such as animations, games, and image processing.
+Rendering: Pixels are drawn directly on the canvas, making it more performant for complex graphics that change frequently.
+API: The canvas API provides methods for drawing shapes, text, images, and for performing transformations.
+
+Example:
+
+<canvas id="myCanvas" width="400" height="200"></canvas>
+<script>
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(0, 0, 100, 100);
+</script>
+
+<svg>:
+
+Definition: SVG (Scalable Vector Graphics) is an XML-based markup language for describing two-dimensional vector graphics.
+Use Cases: Best for static graphics, icons, and illustrations that need to scale without losing quality. Also used for animations and interactivity.
+Rendering: SVG graphics are rendered as vector images, allowing them to scale smoothly and be styled with CSS.
+Accessibility: Because SVG elements are part of the DOM, they can be made accessible and can be manipulated directly with CSS and JavaScript.
+
+Example:
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" fill="red" />
+</svg>
+
+Key Differences:
+
+Canvas: Raster-based; drawn as pixels.
+SVG: Vector-based; describes graphics in terms of shapes and lines.
+Interactivity:
+
+Canvas: Requires JavaScript for any interaction; does not maintain individual shapes as objects.
+SVG: Each element can be manipulated directly; supports event handling natively.
+Performance:
+
+Canvas: More efficient for frequent updates (like animations).
+SVG: Better for static graphics that do not change often.
+Size and Quality:
+
+Canvas: Quality can degrade when scaling up due to pixelation.
+SVG: Remains crisp and clear at any size since it is vector-based.
+Choosing between <canvas> and <svg> depends on the specific needs of your project. For dynamic, complex graphics, use <canvas>; for scalable, accessible graphics, use <svg>.
+
+
+
+
+
+
+
+
+
+
+
+
+
